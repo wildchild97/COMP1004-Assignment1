@@ -9,15 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//Caitlin Foster    #200311158
+//Sales Bonus form  
+//Last Modified: January 29th 2017	
+
+//Created GUI - made and placed company logo - code to validate hours worked - allow language changes - code to validate sales
+
+//Form will allow user to enter an employee's name, Id, #hours worked and their 
+//total sales and calculate their sales bonus. 
+//Will also allow user to change language an print the form
+
 namespace COMP1004_Assignment1
 {
     public partial class SalesBonus : Form
     {
         //PRIVATE INSTANCE VARIABLES    
         private int _hoursWorked;
-
-        //Constructors++++++++++++++++++++++
-
+        private int _totalSales;
+        
         /// <summary>
         /// Default constructor
         /// </summary>
@@ -79,7 +88,7 @@ namespace COMP1004_Assignment1
             }
             else
             {
-             
+               
             }
         }
 

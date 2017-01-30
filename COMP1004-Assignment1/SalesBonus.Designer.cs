@@ -39,13 +39,13 @@
             this.BonusLabel = new System.Windows.Forms.Label();
             this.BonusTextBox = new System.Windows.Forms.TextBox();
             this.LanguageGroupBox = new System.Windows.Forms.GroupBox();
+            this.SpanishRadioButton = new System.Windows.Forms.RadioButton();
             this.FrenchRadioButton = new System.Windows.Forms.RadioButton();
             this.EnglishRadioButton = new System.Windows.Forms.RadioButton();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.PrintButton = new System.Windows.Forms.Button();
-            this.SpanishRadioButton = new System.Windows.Forms.RadioButton();
             this.LanguageGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -93,7 +93,7 @@
             // NameTextBox
             // 
             this.NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameTextBox.Location = new System.Drawing.Point(147, 150);
+            this.NameTextBox.Location = new System.Drawing.Point(171, 150);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(174, 26);
             this.NameTextBox.TabIndex = 4;
@@ -101,7 +101,7 @@
             // IdTextBox
             // 
             this.IdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdTextBox.Location = new System.Drawing.Point(147, 182);
+            this.IdTextBox.Location = new System.Drawing.Point(171, 182);
             this.IdTextBox.Name = "IdTextBox";
             this.IdTextBox.Size = new System.Drawing.Size(174, 26);
             this.IdTextBox.TabIndex = 5;
@@ -111,7 +111,7 @@
             this.HoursTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoursTextBox.Location = new System.Drawing.Point(171, 233);
             this.HoursTextBox.Name = "HoursTextBox";
-            this.HoursTextBox.Size = new System.Drawing.Size(100, 26);
+            this.HoursTextBox.Size = new System.Drawing.Size(150, 26);
             this.HoursTextBox.TabIndex = 6;
             // 
             // SalesTextBox
@@ -119,16 +119,16 @@
             this.SalesTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SalesTextBox.Location = new System.Drawing.Point(171, 268);
             this.SalesTextBox.Name = "SalesTextBox";
-            this.SalesTextBox.Size = new System.Drawing.Size(100, 26);
+            this.SalesTextBox.Size = new System.Drawing.Size(150, 26);
             this.SalesTextBox.TabIndex = 7;
             // 
             // BonusLabel
             // 
             this.BonusLabel.AutoSize = true;
-            this.BonusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BonusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BonusLabel.Location = new System.Drawing.Point(14, 326);
             this.BonusLabel.Name = "BonusLabel";
-            this.BonusLabel.Size = new System.Drawing.Size(107, 20);
+            this.BonusLabel.Size = new System.Drawing.Size(120, 20);
             this.BonusLabel.TabIndex = 8;
             this.BonusLabel.Text = "Sales Bonus :";
             // 
@@ -138,7 +138,7 @@
             this.BonusTextBox.Location = new System.Drawing.Point(171, 326);
             this.BonusTextBox.Name = "BonusTextBox";
             this.BonusTextBox.ReadOnly = true;
-            this.BonusTextBox.Size = new System.Drawing.Size(100, 26);
+            this.BonusTextBox.Size = new System.Drawing.Size(150, 26);
             this.BonusTextBox.TabIndex = 9;
             // 
             // LanguageGroupBox
@@ -153,6 +153,17 @@
             this.LanguageGroupBox.TabIndex = 10;
             this.LanguageGroupBox.TabStop = false;
             this.LanguageGroupBox.Text = "Language";
+            // 
+            // SpanishRadioButton
+            // 
+            this.SpanishRadioButton.AutoSize = true;
+            this.SpanishRadioButton.Location = new System.Drawing.Point(6, 89);
+            this.SpanishRadioButton.Name = "SpanishRadioButton";
+            this.SpanishRadioButton.Size = new System.Drawing.Size(85, 24);
+            this.SpanishRadioButton.TabIndex = 2;
+            this.SpanishRadioButton.TabStop = true;
+            this.SpanishRadioButton.Text = "Español";
+            this.SpanishRadioButton.UseVisualStyleBackColor = true;
             // 
             // FrenchRadioButton
             // 
@@ -178,9 +189,10 @@
             // 
             // LogoPictureBox
             // 
-            this.LogoPictureBox.Location = new System.Drawing.Point(190, 17);
+            this.LogoPictureBox.Image = global::COMP1004_Assignment1.Properties.Resources.logo;
+            this.LogoPictureBox.Location = new System.Drawing.Point(171, 17);
             this.LogoPictureBox.Name = "LogoPictureBox";
-            this.LogoPictureBox.Size = new System.Drawing.Size(131, 95);
+            this.LogoPictureBox.Size = new System.Drawing.Size(175, 125);
             this.LogoPictureBox.TabIndex = 11;
             this.LogoPictureBox.TabStop = false;
             // 
@@ -203,6 +215,7 @@
             this.NextButton.TabIndex = 13;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // PrintButton
             // 
@@ -213,17 +226,6 @@
             this.PrintButton.TabIndex = 14;
             this.PrintButton.Text = "Print";
             this.PrintButton.UseVisualStyleBackColor = true;
-            // 
-            // SpanishRadioButton
-            // 
-            this.SpanishRadioButton.AutoSize = true;
-            this.SpanishRadioButton.Location = new System.Drawing.Point(6, 89);
-            this.SpanishRadioButton.Name = "SpanishRadioButton";
-            this.SpanishRadioButton.Size = new System.Drawing.Size(85, 24);
-            this.SpanishRadioButton.TabIndex = 2;
-            this.SpanishRadioButton.TabStop = true;
-            this.SpanishRadioButton.Text = "Español";
-            this.SpanishRadioButton.UseVisualStyleBackColor = true;
             // 
             // SalesBonus
             // 

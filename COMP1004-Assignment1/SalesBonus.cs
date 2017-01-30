@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 //Caitlin Foster    #200311158
 //Sales Bonus form  
-//Last Modified: January 29th 2017	
+//Created: January 16th 2017     Last Modified: January 29th 2017	
 
 //Created GUI - made and placed company logo - code to validate hours worked - allow language changes - code to validate sales
 
@@ -27,6 +27,8 @@ namespace COMP1004_Assignment1
         private int _hoursWorked;
         private int _totalSales;
         
+        //CONSTRUCTORS
+
         /// <summary>
         /// Default constructor
         /// </summary>
@@ -36,8 +38,10 @@ namespace COMP1004_Assignment1
             
         }
 
+        //EVENT HANDLERS
+
         /// <summary>
-        /// This method clears all textboxes when the next button is clicked
+        /// This method clears all textboxes when the next button is clicked except for total sales
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -46,7 +50,6 @@ namespace COMP1004_Assignment1
             NameTextBox.Text = "";
             IdTextBox.Text = "";
             HoursTextBox.Text = "";
-            SalesTextBox.Text = "";
             BonusTextBox.Text = "";
         }
 
@@ -57,9 +60,11 @@ namespace COMP1004_Assignment1
         /// <param name="e"></param>
         private void HoursTextBox_TextChanged(object sender, EventArgs e)
         {
+            //see if input is a number
             if (Int32.TryParse(HoursTextBox.Text, out _hoursWorked))
             {
-                if(_hoursWorked > 161)
+                //if yes see if its 160 or less
+                if (_hoursWorked > 161)
                 {
                     MessageBox.Show("Invalid number. Hours exceed 160");
                     HoursTextBox.Text = "";
@@ -68,6 +73,7 @@ namespace COMP1004_Assignment1
 
             else
             {
+                //if no ask user for a number
                 MessageBox.Show("Please enter a number only");
                 HoursTextBox.Text = "";
             }
@@ -99,15 +105,18 @@ namespace COMP1004_Assignment1
         /// <param name="e"></param>
         private void FrenchRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            //radio buttons language being changed
             LanguageGroupBox.Text = "La Langue";
             EnglishRadioButton.Text = "Anglais";
             FrenchRadioButton.Text = "Français";
             SpanishRadioButton.Text = "Espanol";
+            //labels language being changed
             NameLabel.Text = "Nom de L'Employé";
             IdLabel.Text = "ID de L'Employé";
             HoursLabel.Text = "Total des Heures Travaillées";
             SalesLabel.Text = "Ventes Mensuelles Totales";
             BonusLabel.Text = "Bonus de vente";
+            //buttons language beng changed
             CalculateButton.Text = "Calculer";
             PrintButton.Text = "Imprimir";
             NextButton.Text = "Prochain";
@@ -121,15 +130,18 @@ namespace COMP1004_Assignment1
         /// <param name="e"></param>
         private void SpanishRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            //radio buttons language being changed
             LanguageGroupBox.Text = "Idioma";
             EnglishRadioButton.Text = "Inglés";
             FrenchRadioButton.Text = "Francés";
             SpanishRadioButton.Text = "Español";
+            //labels language being changed
             NameLabel.Text = "Nombre de Empleado";
             IdLabel.Text = "ID de Empleado";
             HoursLabel.Text = "Total de Horas Trabajadas";
             SalesLabel.Text = "Ventas Mensuales Totales";
             BonusLabel.Text = "Bono de Ventas";
+            //buttons language beng changed
             CalculateButton.Text = "Calcular";
             PrintButton.Text = "Imprimer";
             NextButton.Text = "Entrante";
@@ -142,15 +154,18 @@ namespace COMP1004_Assignment1
         /// <param name="e"></param>
         private void EnglishRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            //radio buttons language being changed
             LanguageGroupBox.Text = "Language";
             EnglishRadioButton.Text = "English";
             FrenchRadioButton.Text = "French";
             SpanishRadioButton.Text = "Spanish";
+            //labels language being changed
             NameLabel.Text = "Employee Name";
             IdLabel.Text = "Employee ID";
             HoursLabel.Text = "Total Hours Worked";
             SalesLabel.Text = "Total Monthly Sales";
             BonusLabel.Text = "Sales Bonus";
+            //buttons language beng changed
             CalculateButton.Text = "Calculate";
             PrintButton.Text = "Print";
             NextButton.Text = "Next";

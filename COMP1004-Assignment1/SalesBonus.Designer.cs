@@ -113,6 +113,7 @@
             this.HoursTextBox.Name = "HoursTextBox";
             this.HoursTextBox.Size = new System.Drawing.Size(150, 26);
             this.HoursTextBox.TabIndex = 6;
+            this.HoursTextBox.TextChanged += new System.EventHandler(this.HoursTextBox_TextChanged);
             // 
             // SalesTextBox
             // 

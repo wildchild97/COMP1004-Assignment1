@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,11 @@ namespace COMP1004_Assignment1
             BonusTextBox.Text = "";
         }
 
+        /// <summary>
+        /// This method sees if hours entered is valid and stores it. if not it notifys the user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HoursTextBox_TextChanged(object sender, EventArgs e)
         {
             if (Int32.TryParse(HoursTextBox.Text, out _hoursWorked))
@@ -59,13 +65,32 @@ namespace COMP1004_Assignment1
             
         }
 
+        /// <summary>
+        /// This method makes sure a vaild salary number is entered and stores it
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SalesTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            if (SalesTextBox.Text.Any(c => Char.IsLetter(c)))
+            {
+                MessageBox.Show("Please enter a number only");
+                SalesTextBox.Text = "";
+            }
+            else
+            {
+             
+            }
         }
 
+        /// <summary>
+        /// this method changes all text on the form to french when the french language is selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrenchRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            LanguageGroupBox.Text = "La Langue";
             EnglishRadioButton.Text = "Anglais";
             FrenchRadioButton.Text = "Français";
             SpanishRadioButton.Text = "Espanol";
@@ -80,8 +105,14 @@ namespace COMP1004_Assignment1
 
         }
 
+        /// <summary>
+        /// This method changes all text on the form to spanish when the spanish language is selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SpanishRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            LanguageGroupBox.Text = "Idioma";
             EnglishRadioButton.Text = "Inglés";
             FrenchRadioButton.Text = "Francés";
             SpanishRadioButton.Text = "Español";
@@ -95,8 +126,14 @@ namespace COMP1004_Assignment1
             NextButton.Text = "Entrante";
         }
 
+        /// <summary>
+        /// This method changes all text on the form to English when the english language is selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EnglishRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            LanguageGroupBox.Text = "Language";
             EnglishRadioButton.Text = "English";
             FrenchRadioButton.Text = "French";
             SpanishRadioButton.Text = "Spanish";
@@ -108,6 +145,16 @@ namespace COMP1004_Assignment1
             CalculateButton.Text = "Calculate";
             PrintButton.Text = "Print";
             NextButton.Text = "Next";
+        }
+
+        /// <summary>
+        /// This method gives the user a message saying their form is being printed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PrintButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your Form is being sent to the printer");
         }
     }
 }

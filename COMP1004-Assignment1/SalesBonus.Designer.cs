@@ -122,6 +122,7 @@
             this.SalesTextBox.Name = "SalesTextBox";
             this.SalesTextBox.Size = new System.Drawing.Size(150, 26);
             this.SalesTextBox.TabIndex = 7;
+            this.SalesTextBox.TextChanged += new System.EventHandler(this.SalesTextBox_TextChanged);
             // 
             // BonusLabel
             // 
@@ -165,6 +166,7 @@
             this.SpanishRadioButton.TabStop = true;
             this.SpanishRadioButton.Text = "Español";
             this.SpanishRadioButton.UseVisualStyleBackColor = true;
+            this.SpanishRadioButton.CheckedChanged += new System.EventHandler(this.SpanishRadioButton_CheckedChanged);
             // 
             // FrenchRadioButton
             // 
@@ -175,6 +177,7 @@
             this.FrenchRadioButton.TabIndex = 1;
             this.FrenchRadioButton.Text = "Français";
             this.FrenchRadioButton.UseVisualStyleBackColor = true;
+            this.FrenchRadioButton.CheckedChanged += new System.EventHandler(this.FrenchRadioButton_CheckedChanged);
             // 
             // EnglishRadioButton
             // 
@@ -187,6 +190,7 @@
             this.EnglishRadioButton.TabStop = true;
             this.EnglishRadioButton.Text = "English";
             this.EnglishRadioButton.UseVisualStyleBackColor = true;
+            this.EnglishRadioButton.CheckedChanged += new System.EventHandler(this.EnglishRadioButton_CheckedChanged);
             // 
             // LogoPictureBox
             // 

@@ -58,5 +58,56 @@ namespace COMP1004_Assignment1
             }
             
         }
+
+        private void SalesTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrenchRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            EnglishRadioButton.Text = "Anglais";
+            FrenchRadioButton.Text = "Français";
+            SpanishRadioButton.Text = "Espanol";
+            NameLabel.Text = "Nom de L'Employé";
+            IdLabel.Text = "ID de L'Employé";
+            HoursLabel.Text = "Total des Heures Travaillées";
+            SalesLabel.Text = "Ventes Mensuelles Totales";
+            BonusLabel.Text = "Bonus de vente";
+            CalculateButton.Text = "Calculer";
+            PrintButton.Text = "Imprimir";
+            NextButton.Text = "Prochain";
+
+        }
+
+        private void SpanishRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            EnglishRadioButton.Text = "Inglés";
+            FrenchRadioButton.Text = "Francés";
+            SpanishRadioButton.Text = "Español";
+            NameLabel.Text = "Nombre de Empleado";
+            IdLabel.Text = "ID de Empleado";
+            HoursLabel.Text = "Total de Horas Trabajadas";
+            SalesLabel.Text = "Ventas Mensuales Totales";
+            BonusLabel.Text = "Bono de Ventas";
+            CalculateButton.Text = "Calcular";
+            PrintButton.Text = "Imprimer";
+            NextButton.Text = "Entrante";
+        }
+
+        private void EnglishRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            EnglishRadioButton.Text = "English";
+            FrenchRadioButton.Text = "French";
+            SpanishRadioButton.Text = "Spanish";
+            NameLabel.Text = "Employee Name";
+            IdLabel.Text = "Employee ID";
+            HoursLabel.Text = "Total Hours Worked";
+            SalesLabel.Text = "Total Monthly Sales";
+            BonusLabel.Text = "Sales Bonus";
+            CalculateButton.Text = "Calculate";
+            PrintButton.Text = "Print";
+            NextButton.Text = "Next";
+        }
     }
 }
